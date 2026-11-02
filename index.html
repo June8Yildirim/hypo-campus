@@ -1,145 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Hypo-Campus</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Hypo-Campus — Privacy Policy &amp; Development Progress</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+    :root { --bg:#ffffff; --text:#1f2328; --muted:#59636e; --border:#d1d9e0; --accent:#e8892a; --code:#f6f8fa; --row:#f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1a232e; --text:#e8ecef; --muted:#98aabb; --border:#2f3e50; --accent:#ff9f43; --code:#243040; --row:#1f2a37; }
+    }
+    html { background: var(--bg); }
+    body { max-width: 860px; margin: 0 auto; padding: 48px 24px 96px; color: var(--text); background: var(--bg);
+           font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    h1 { font-size: 2.1em; margin: 0 0 4px; }
+    h2 { font-size: 1.4em; margin-top: 2.2em; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    h1 + p em { color: var(--muted); font-style: normal; font-size: .9em; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .92em; }
+    th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: var(--row); }
+    tbody tr:nth-child(even) { background: var(--row); }
+    td:first-child { white-space: nowrap; font-weight: 600; }
+    code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+    ul { padding-left: 22px; }
+    li { margin: 3px 0; }
+    ul.task-list { list-style: none; padding-left: 4px; }
+    ul.task-list input { margin-right: 8px; accent-color: var(--accent); }
+    p strong { color: var(--accent); }
+  </style>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
+  <style>
+    /* Page navigation */
+    .site-nav { position: sticky; top: 0; z-index: 10; display: flex; gap: 24px; justify-content: center;
+                padding: 14px 24px; margin: -48px -24px 32px; background: var(--bg); border-bottom: 1px solid var(--border); }
+    .site-nav a { font-weight: 600; color: var(--text); }
+    .site-nav a:hover { color: var(--accent); }
+    section[id], h2[id] { scroll-margin-top: 64px; }
+    .page-divider { margin: 72px 0 0; }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 2px solid #007AFF;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: #007AFF;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            color: #666;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-
-        h2 {
-            color: #007AFF;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        h3 {
-            color: #333;
-            font-size: 1.3em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
-
-        .summary-box {
-            background-color: #e7f3ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 4px solid #007AFF;
-        }
-
-        .summary-box h3 {
-            color: #007AFF;
-            margin-top: 0;
-        }
-
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .contact-info strong {
-            color: #007AFF;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        a {
-            color: #007AFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    /* Privacy policy: original styles, scoped to its section */
+    .privacy { margin: -32px -24px 0; padding: 24px 0; background-color: #f5f5f5; color: #333; line-height: 1.6;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+    .privacy * { margin: 0; padding: 0; box-sizing: border-box; }
+    .privacy .container { max-width: 800px; margin: 0 auto; padding: 20px; background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .privacy header { text-align: center; padding: 40px 20px; border-bottom: 2px solid #007AFF; margin-bottom: 40px; }
+    .privacy h1 { color: #007AFF; font-size: 2.5em; margin-bottom: 10px; }
+    .privacy .last-updated { color: #666; font-size: 0.9em; font-style: italic; text-align: center; }
+    .privacy h2 { color: #007AFF; font-size: 1.8em; margin-top: 40px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #e0e0e0; }
+    .privacy h3 { color: #333; font-size: 1.3em; margin-top: 30px; margin-bottom: 15px; }
+    .privacy p { margin-bottom: 15px; text-align: justify; }
+    .privacy p strong { color: inherit; }
+    .privacy ul, .privacy ol { margin-left: 30px; margin-bottom: 15px; padding-left: 0; }
+    .privacy li { margin-bottom: 10px; }
+    .privacy .highlight { background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0; }
+    .privacy .summary-box { background-color: #e7f3ff; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #007AFF; }
+    .privacy .summary-box h3 { color: #007AFF; margin-top: 0; }
+    .privacy .contact-info { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 30px 0; }
+    .privacy .contact-info strong { color: #007AFF; }
+    .privacy footer { text-align: center; padding: 30px 20px; margin-top: 50px; border-top: 1px solid #e0e0e0; color: #666; font-size: 0.9em; }
+    .privacy footer p { text-align: center; }
+    .privacy a { color: #007AFF; text-decoration: none; }
+    .privacy a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .privacy .container { padding: 15px; }
+      .privacy h1 { font-size: 2em; }
+      .privacy h2 { font-size: 1.5em; }
+    }
+  </style>
 </head>
 <body>
+<nav class="site-nav">
+  <a href="#privacy-policy">Privacy Policy</a>
+  <a href="#development-progress">Development Progress</a>
+</nav>
+<section id="privacy-policy" class="privacy">
     <div class="container">
         <header>
             <h1>Privacy Policy</h1>
@@ -424,5 +530,312 @@
             <p>&copy; 2026 Hypo-Campus. All rights reserved.</p>
         </footer>
     </div>
+</section>
+<hr class="page-divider" />
+<section id="development-progress">
+<h1 id="hypo-campus--development-progress">Hypo-Campus — Development
+Progress</h1>
+<p><em>Last updated: 2026-11-02</em></p>
+<h2 id="overview">Overview</h2>
+<p>Hypo-Campus grows from a basic flashcard MVP (1.0) to today's 2.3.1
+in 13 releases, plus two Android releases. Each release ships one
+feature theme, and patch releases (x.x.1) hold the bug fixes. Versions
+are grouped by feature, not by commit date, so they don't match the git
+history exactly.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Type</th>
+<th>Theme</th>
+<th>Highlights</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#10--mvp-core-flashcards">1.0</a></td>
+<td>MVP</td>
+<td>Core flashcards</td>
+<td>Decks, Q&amp;A cards, flip, manual entry, review buttons</td>
+</tr>
+<tr>
+<td><a href="#11--markdown-import-and-export">1.1</a></td>
+<td>Feature</td>
+<td>Markdown import and export</td>
+<td>.md parser, file import, deck export</td>
+</tr>
+<tr>
+<td><a href="#12--review-queue-and-reminders">1.2</a></td>
+<td>Feature</td>
+<td>Review queue and reminders</td>
+<td>Due queue by review bucket, daily notifications</td>
+</tr>
+<tr>
+<td><a href="#13--richer-cards">1.3</a></td>
+<td>Feature</td>
+<td>Richer cards</td>
+<td>Multiple choice, fill in the blank, Markdown and LaTeX</td>
+</tr>
+<tr>
+<td><a href="#14--ai-card-creation">1.4</a></td>
+<td>Feature</td>
+<td>AI card creation</td>
+<td>Generate cards with Google Gemini</td>
+</tr>
+<tr>
+<td><a href="#15--library-organisation">1.5</a></td>
+<td>Feature</td>
+<td>Library organisation</td>
+<td>Subjects; list, wheel and grid views; sorting</td>
+</tr>
+<tr>
+<td><a href="#16--statistics">1.6</a></td>
+<td>Feature</td>
+<td>Statistics</td>
+<td>Activity heatmap, 7-day chart, deck stats</td>
+</tr>
+<tr>
+<td><a href="#161--stability-fixes">1.6.1</a></td>
+<td>Bug fix</td>
+<td>Stability</td>
+<td>Review queue, LaTeX, notification and macOS fixes</td>
+</tr>
+<tr>
+<td><a href="#20--smart-scheduling">2.0</a></td>
+<td>Major</td>
+<td>Smart scheduling</td>
+<td>SM-2 and FSRS, cram mode, new review buttons</td>
+</tr>
+<tr>
+<td><a href="#21--personalisation">2.1</a></td>
+<td>Feature</td>
+<td>Personalisation</td>
+<td>8 themes, card animations, fonts, forced updates</td>
+</tr>
+<tr>
+<td><a href="#22--motivation">2.2</a></td>
+<td>Feature</td>
+<td>Motivation</td>
+<td>24 achievements, streaks, home-screen widget</td>
+</tr>
+<tr>
+<td><a href="#23--photos-and-new-card-types">2.3</a></td>
+<td>Feature</td>
+<td>Photos and new card types</td>
+<td>Card photos, true/false, dropdown blanks</td>
+</tr>
+<tr>
+<td><a href="#231--performance-and-polish">2.3.1</a></td>
+<td>Bug fix</td>
+<td>Performance and polish</td>
+<td>Review freeze, keyboard and wheel fixes</td>
+</tr>
+<tr>
+<td><a href="#android-231--new-platform">Android 2.3.1</a></td>
+<td>New platform</td>
+<td>Android</td>
+<td>Full iOS feature set except AI card creation</td>
+</tr>
+<tr>
+<td><a href="#android-231-build-4--play-store-readiness">Android 2.3.1
+(build 4)</a></td>
+<td>Bug fix</td>
+<td>Play Store readiness</td>
+<td>Reminder, theme, export, widget and icon fixes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10--mvp-core-flashcards">1.0 — MVP: core flashcards</h2>
+<p>The smallest app that works end to end: make a deck, add cards,
+review them.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li>Create, rename and delete decks</li>
+<li>Note cards (question and answer), entered by hand</li>
+<li>Tap a card to flip it; swipe between cards</li>
+<li>Four review buttons with fixed intervals: Critical (1 day), Soon (3
+days), Stable (5 days), Mastered (7 days)</li>
+<li>Local storage on the device</li>
+</ul>
+<h2 id="11--markdown-import-and-export">1.1 — Markdown import and
+export</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>Import a .md file and turn it into a deck</li>
+<li>Markdown parser for card blocks</li>
+<li>Export a deck back to a Markdown file and share it</li>
+</ul>
+<h2 id="12--review-queue-and-reminders">1.2 — Review queue and
+reminders</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>Review queue that groups due cards by bucket (Critical, Soon,
+Stable, Mastered)</li>
+<li>Review sessions that work through one bucket at a time</li>
+<li>Daily reminder notifications when cards are due</li>
+</ul>
+<h2 id="13--richer-cards">1.3 — Richer cards</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>Multiple-choice cards</li>
+<li>Fill-in-the-blank cards</li>
+<li>Markdown formatting and LaTeX maths on both sides of a card</li>
+<li>Card type picker when adding a card</li>
+</ul>
+<h2 id="14--ai-card-creation">1.4 — AI card creation</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>Generate a set of cards from a topic or pasted notes with Google
+Gemini</li>
+<li>Review and edit generated cards before saving them to a deck</li>
+</ul>
+<h2 id="15--library-organisation">1.5 — Library organisation</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>Subjects that group related decks</li>
+<li>Three deck views: list, wheel and grid</li>
+<li>Sort decks by recently reviewed, alphabetical or card count</li>
+<li>Deck detail screen with its card list</li>
+</ul>
+<h2 id="16--statistics">1.6 — Statistics</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>12-week activity heatmap</li>
+<li>7-day review chart and upcoming-due chart (tomorrow, next four
+days)</li>
+<li>Per-deck stats and a review log</li>
+</ul>
+<h2 id="161--stability-fixes">1.6.1 — Stability fixes</h2>
+<p><strong>Bug fixes</strong></p>
+<ul>
+<li>Review queue showing stale or duplicate cards</li>
+<li>LaTeX not rendering in some cards</li>
+<li>Notifications not firing reliably</li>
+<li>Wheel and list deck views not showing on macOS</li>
+</ul>
+<hr />
+<h2 id="20--smart-scheduling">2.0 — Smart scheduling</h2>
+<p>The major release: reviews adapt to how well each card is known,
+instead of using fixed intervals.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li>SM-2 adaptive intervals with a per-card ease factor</li>
+<li>FSRS-4.5 as a second algorithm, selectable in Settings</li>
+<li>Cram mode to drill a deck without changing its schedule</li>
+<li>Redesigned review buttons, with undo for the last rating</li>
+</ul>
+<h2 id="21--personalisation">2.1 — Personalisation</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>8 colour themes</li>
+<li>Card animation styles: 3D flip, slide or none</li>
+<li>Card font weight (9 options) and width (4 options)</li>
+<li>Settings grouped into categories: Appearance, Cards, Editing, Decks,
+Review</li>
+<li>Forced-update prompt when a required new version is out</li>
+</ul>
+<h2 id="22--motivation">2.2 — Motivation</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>24 achievements: review milestones (1 to 10,000), daily goals,
+perfect day, cram sessions</li>
+<li>Daily streaks from 3 to 365 days, with a streak freeze</li>
+<li>Home-screen widget that shows a card of the day</li>
+</ul>
+<h2 id="23--photos-and-new-card-types">2.3 — Photos and new card
+types</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li>Add photos to cards from the camera or photo library, with a
+full-screen viewer</li>
+<li>True/false cards</li>
+<li>Fill-in-the-blank cards with a dropdown answer menu</li>
+<li>Markdown import for the new card types</li>
+</ul>
+<h2 id="231--performance-and-polish">2.3.1 — Performance and polish</h2>
+<p><strong>Bug fixes</strong></p>
+<ul>
+<li>1–3 second freeze after tapping a review button (queue refreshes are
+now batched)</li>
+<li>Keyboard covering text fields when adding cards</li>
+<li>Jerky deck wheel animation</li>
+<li>Card view layout tidied up</li>
+</ul>
+<hr />
+<h2 id="android-231--new-platform">Android 2.3.1 — New platform</h2>
+<p>The Android app starts at 2.3.1 so both platforms share one version
+number. It matches the iOS feature set except AI card creation.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li>Kotlin and Jetpack Compose app for Android 8.0 and later</li>
+<li>Every iOS feature from 1.0 to 2.3 except AI card creation: all five
+card types, SM-2 and FSRS, cram mode, Markdown and LaTeX, import and
+export, photos, stats, achievements, 8 themes, notifications and the
+widget</li>
+<li>Data stays on the device; no ads and no advertising ID</li>
+</ul>
+<p><strong>Bug fixes found while porting</strong></p>
+<ul>
+<li>Tapping card text didn't flip the card</li>
+<li>Heatmap day labels were clipped</li>
+<li>Only the first line of a multi-line text field could be tapped</li>
+</ul>
+<h2 id="android-231-build-4--play-store-readiness">Android 2.3.1 (build
+4) — Play Store readiness</h2>
+<p>Fixes found while preparing the Play Console upload and testing on
+the emulator. The version name stays 2.3.1; the version code is 4.</p>
+<p><strong>Bug fixes</strong></p>
+<ul>
+<li>Midnight theme: primary colour was almost invisible on the dark
+background (now <code>#5288C0</code>)</li>
+<li>Exported Markdown couldn't be imported back; export now writes the
+import format for all five card types</li>
+<li>Exporting an empty deck now shows "Nothing to Export" instead of
+sharing an empty file</li>
+<li>Review reminders were lost after a force-stop until the next card
+was rated; they're now rescheduled on every launch</li>
+<li>Notification icon showed as a solid blob; it's now a monochrome card
+icon</li>
+<li>Widget showed raw Markdown symbols such as backticks</li>
+</ul>
+<p><strong>Play Console</strong></p>
+<ul>
+<li>The manifest removes the <code>AD_ID</code> permission so no library
+can add it back, matching a "No" answer on the Advertising ID form</li>
+<li>Version code raised to 4 for the next upload</li>
+</ul>
+<p><strong>Testing</strong></p>
+<ul>
+<li>Round-trip unit test: export a deck with every card type, import it,
+and check each card matches</li>
+<li>Checked on an Android 15 emulator: a reminder fires and opens its
+review queue, the widget works on the home screen, the camera adds a
+photo to a card, and export opens the share sheet</li>
+</ul>
+<hr />
+<h2 id="known-issues-and-next-steps">Known issues and next steps</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />iOS: Midnight theme primary colour
+is almost invisible on its background (fixed on Android)</label></li>
+<li><label><input type="checkbox" />iOS: Markdown export uses a format
+that the importer can't read back (fixed on Android)</label></li>
+<li><label><input type="checkbox" />Android: test importing an exported
+deck in the app (covered by a unit test so far)</label></li>
+<li><label><input type="checkbox" />Android: test on a physical device
+before the Play Store release</label></li>
+<li><label><input type="checkbox" checked="" />Android: test the widget
+on a home screen, a real notification, the camera, and
+export/share</label></li>
+<li><label><input type="checkbox" checked="" />Android: raise
+versionCode above 1 before the next Play Console upload</label></li>
+<li><label><input type="checkbox" />Android: answer "No" on the Play
+Console Advertising ID form</label></li>
+<li><label><input type="checkbox" />Commit the iOS freeze fix, the
+Android project and this file</label></li>
+<li><label><input type="checkbox" />Tag future releases in git (starting
+at v2.3.1) so the history follows this version plan</label></li>
+</ul>
+</section>
 </body>
 </html>
